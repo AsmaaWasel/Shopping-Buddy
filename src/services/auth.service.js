@@ -8,6 +8,7 @@ export const login = async (username, password) => {
       password,
     });
     console.log("LOGIN RESPONSE ✅", res.data);
+
     return res.data.token;
   } catch (error) {
     // throw new Error("Login failed");
@@ -16,6 +17,5 @@ export const login = async (username, password) => {
       status: error.response?.status,
       data: error.response?.data,
     });
-
   }
 };
