@@ -5,6 +5,7 @@ const Sidebar = () => {
   const links = [
     { name: "Home", path: "home" },
     { name: "Users", path: "users" },
+    { name: "Products", path: "products" },
   ];
 
   return (
