@@ -87,7 +87,7 @@ Endpoints:
 ---
 ## 🗂️ Project Structure
 ---
-    src/
+ src/
  ├─ services/
  │   ├─ api.js
  │   ├─ auth.service.js
@@ -96,13 +96,27 @@ Endpoints:
  │   └─ carts.service.js
  ├─ context/
  │   └─ AuthContext.jsx
+ ├─ components/
+ │   ├─ common/
+ │   │   ├─ AddButton.jsx
+ │   │   ├─ UserForm.jsx
+ │   │   ├─ UsersTable.jsx
+ │   │   ├─ ConfirmModal.jsx
+ │   │   ├─ GenericModal.jsx
+ │   │   └─ SplashLoader.jsx
+ │   ├─ admin/
+ │   │   └─ UsersActions.jsx
+ │   └─ ui/
+ │       └─ QuantumPulseLoader.jsx
  ├─ layouts/
  │   ├─ UserLayout.jsx
  │   └─ AdminLayout.jsx
  ├─ pages/
  │   ├─ Login.jsx
+ │   ├─ dashboard.jsx
  │   ├─ user/
  │   └─ admin/
+ │       └─ AdminUsersPage.jsx
  └─ routes/
      └─ AppRoutes.jsx
 
