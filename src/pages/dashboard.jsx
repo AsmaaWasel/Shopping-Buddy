@@ -5,14 +5,14 @@ import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
   return (
-    <div className="flex flex-col h-screen">
+    <div className="flex flex-col">
       <Header />
 
       <div className="flex flex-1">
         <Sidebar />
 
         {/* كل صفحة من صفحات الداشبورد هتظهر هنا */}
-        <main className="flex-1 bg-gray-100 p-6 overflow-auto">
+        <main className="flex-1  overflow-auto">
           <Outlet />
         </main>
       </div>

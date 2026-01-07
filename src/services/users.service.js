@@ -2,8 +2,12 @@
 import { api } from "./api";
 
 export const getAllUsers = async () => {
-  const res = await api.get("/users");
-  return res.data;
+ try {
+    const res = await api.get("/users");
+    return res.data;
+  } catch (error) {
+    throw new Error(error.response?.data?.message || "Failed to fetch users");
+  }
 };
 
 export const getUserByUsername = async (username) => {
