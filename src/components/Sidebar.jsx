@@ -9,7 +9,7 @@ const Sidebar = () => {
   ];
 
   return (
-    <aside className="w-64 bg-gray-300 p-4">
+    <aside className="w-64 h-screen bg-gray-300 p-4">
       <ul className="space-y-4">
         {links.map((link) => (
           <li key={link.name} className="font-medium hover:text-indigo-600">
