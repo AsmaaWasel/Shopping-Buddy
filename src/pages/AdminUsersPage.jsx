@@ -4,10 +4,7 @@ import UsersTable from "../components/common/UsersTable";
 import ConfirmModal from "../components/common/ConfirmModal";
 import AddButton from "../components/common/AddButton";
 import GenericModal from "../components/common/GenericModal";
-
-
 import toast from "react-hot-toast";
-
 import SplashLoader from "../components/common/SplashLoader";
 import UsersActions from "../components/admin/UsersActions";
 
@@ -30,7 +27,7 @@ const AdminUsersPage = () => {
     try {
       if (selectedUser) await editUser(selectedUser.id, user);
       else await addUser(user);
-      toast.success(selectedUser ? "User updated!" : "User added!");
+      toast.success(selectedUser ? "User updated Successfully!" : "User added Successfully!");
       setShowForm(false);
     } catch (err) {
       toast.error(err.message || "Operation failed!");
@@ -39,8 +36,8 @@ const AdminUsersPage = () => {
 
   const confirmDelete = (id) => setDeleteId(id);
   const handleDelete = async () => {
-    try { await removeUser(deleteId); toast.success("User deleted!"); }
-    catch (err) { toast.error(err.message || "Delete failed!"); }
+    try { await removeUser(deleteId); toast.success("User deleted Successfully!"); }
+    catch (err) { toast.error(err.message || "Sorry Delete failed!"); }
     finally { setDeleteId(null); }
   };
 

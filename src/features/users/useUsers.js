@@ -51,8 +51,8 @@ const addUser = async (user) => {
   const editUser = async (id, user) => {
     try {
       setLoading(true);
-      const updated = await updateUser(id, user);
-      setUsers((prev) => prev.map((u) => (u.id === id ? updated : u)));
+      const updated = await updateUser(id, { id, ...user }); // ← هنا أضفنا id
+    setUsers((prev) => prev.map((u) => (u.id === id ? updated : u)));
       setSelectedUser(null);
     } catch (err) {
       setError(err.message || "Failed to update user");
