@@ -1,6 +1,6 @@
 import React from "react";
 import { Outlet } from "react-router-dom"; // هنعرض المحتوى المتغير هنا
-import Header from "../components/Header";
+import Header from "../components/ui/Header";
 import Sidebar from "../components/Sidebar";
 
 const Dashboard = () => {
