@@ -1,4 +1,5 @@
 import React from "react";
+import ActionButton from "./ActionButton";
 
 // Component للـ Table Header لتقليل التكرار
 const Th = ({ children, className = "" }) => (
@@ -13,23 +14,6 @@ const Th = ({ children, className = "" }) => (
 const Td = ({ children, className = "" }) => (
   <td className={`px-4 py-2 border-t ${className}`}>{children}</td>
 );
-
-// Component عام لأزرار الإجراءات
-const ActionButton = ({ type, onClick, children }) => {
-  const styles =
-    type === "edit"
-      ? "bg-yellow-500 hover:bg-yellow-600"
-      : "bg-red-500 hover:bg-red-600";
-
-  return (
-    <button
-      onClick={onClick}
-      className={`${styles} px-3 py-1 rounded text-white text-sm transition-colors`}
-    >
-      {children}
-    </button>
-  );
-};
 
 const UsersTable = ({ users, onEdit, onDelete }) => {
   return (
@@ -60,10 +44,14 @@ const UsersTable = ({ users, onEdit, onDelete }) => {
                 <Td>{user.username}</Td>
                 <Td>{user.email}</Td>
                 <Td className="flex justify-center space-x-2">
-                  <ActionButton type="edit" onClick={() => onEdit(user)}>
+                  <ActionButton variant="edit" onClick={() => onEdit(user)}>
                     Edit
                   </ActionButton>
-                  <ActionButton type="delete" onClick={() => onDelete(user.id)}>
+
+                  <ActionButton
+                    variant="delete"
+                    onClick={() => onDelete(user.id)}
+                  >
                     Delete
                   </ActionButton>
                 </Td>
