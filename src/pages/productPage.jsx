@@ -57,10 +57,11 @@ const Products = () => {
   if (error) return <div>Error fetching products</div>;
 
   return (
-    <div className="p-6">
+    <div className="p-8">
       {/* 🔹 Top bar */}
-      <div className="flex justify-end mb-6">
-        <AddButton label="Add Product" onClick={() => setIsModalOpen(true)} />
+      <div className="flex items-center justify-between mb-4">
+      <h1 className="text-2xl font-semibold">Products</h1>
+      <AddButton label="Add Product" onClick={() => setIsModalOpen(true)} />
       </div>
 
       {/* 🔹 Products Grid */}

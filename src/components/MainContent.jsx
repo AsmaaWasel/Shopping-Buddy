@@ -17,7 +17,7 @@ const MainContent = ({ currentSection }) => {
   };
 
   return (
-    <main className="flex-1 bg-gray-400 p-6 overflow-auto">
+    <main className="flex-1 bg-gray-400 p-6 overflow-auto ">
       <h2 className="text-2xl font-bold mb-4">{currentSection}</h2>
       {renderContent()}
     </main>

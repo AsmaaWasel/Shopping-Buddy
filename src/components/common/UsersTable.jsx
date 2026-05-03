@@ -17,7 +17,7 @@ const Td = ({ children, className = "" }) => (
 
 const UsersTable = ({ users, onEdit, onDelete }) => {
   return (
-    <div className="overflow-x-auto">
+    <div className="overflow-x-auto p-8">
       <table className="min-w-full border border-gray-300 rounded-lg overflow-hidden shadow-sm">
         <thead className="bg-gray-100">
           <tr>
