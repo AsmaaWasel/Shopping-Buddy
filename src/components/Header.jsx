@@ -3,9 +3,9 @@ import React from "react";
 
 const Header = () => {
   return (
-    <header className="h-16 bg-gray-200 flex items-center px-6 shadow">
-      <h1 className="text-xl font-bold">Shopping Buddey</h1>
-    </header>
+<div className="h-16 flex items-center overflow-hidden">
+      <h1 className="text-xl font-bold p-2">Shopping Buddy </h1>
+    </div>
   );
 };
 

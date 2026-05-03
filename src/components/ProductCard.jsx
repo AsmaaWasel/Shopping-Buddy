@@ -38,7 +38,7 @@ const ProductCard = ({ product }) => {
   };
 
   return (
-    <div className="bg-white rounded-lg shadow p-4 flex flex-col h-full">
+    <div className=" bg-white rounded-lg shadow p-8 flex flex-col h-full">
       {/* 🖼 Image */}
       <img
         src={product.image}
